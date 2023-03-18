@@ -3,6 +3,7 @@ import './App.css';
 import { render } from '@testing-library/react';
 import Header from './Header';
 import Technologies from './Technologies';
+import Footer from './Footer';
 
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
     <div>
       <div><Header /></div>
       <div><Technologies /></div>
+      <Footer />
     </div>
   );
 }
