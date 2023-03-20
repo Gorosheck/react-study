@@ -12,15 +12,18 @@ grid-template-areas:
 
 .header {
 grid-area: h;
+background-color:bisque;
 }
 .header img {
-  width: 50px;
+  width: 100px;
 }
 
 .nav {
   grid-area: n;
+  background-color:aquamarine;
 }
 
 .content {
   grid-area: c;
+  background-color:darksalmon;
 }
