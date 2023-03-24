@@ -4,7 +4,7 @@ import classes from './Profile.module.css';
 
 const Profile = () => {
    return (
-      <div className={classes.content}>
+      <div>
          <div>
             <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Stars_01_%28MK%29.jpg/911px-Stars_01_%28MK%29.jpg' />
          </div>
