@@ -13,5 +13,6 @@ grid-template-areas:
 
 .app-wrapper-content {
     grid-area: c;
-    background-color:rgb(245, 221, 212);
+    background-color:rgb(253, 166, 135);
+
 }
