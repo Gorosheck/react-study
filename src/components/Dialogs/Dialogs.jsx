@@ -3,8 +3,19 @@ import classes from './Dialogs.module.css';
 
 const Dialogs = (props) => {
    return (
-      <div>
-         Messages
+      <div className={classes.dialogs}>
+         <div className={classes.dialogsItems}>
+            <div className={classes.dialog + ' ' + classes.active}>Леша</div>
+            <div className={classes.dialog}>Артем</div>
+            <div className={classes.dialog}>Андрей</div>
+            <div className={classes.dialog}>Лагуна</div>
+            <div className={classes.dialog}>Дима</div>
+         </div>
+         <div className={classes.messages}>
+            <div className={classes.message}>Hi</div>
+            <div className={classes.message}>How are you</div>
+            <div className={classes.message}>Yo</div>
+         </div>
       </div>
    );
 }
