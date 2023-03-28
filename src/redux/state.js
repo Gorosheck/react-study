@@ -14,11 +14,11 @@ let state = {
          { id: 3, message: 'Yo' }
       ],
       dialogs: [
-         { id: 1, name: 'Леша' },
-         { id: 2, name: 'Артем' },
-         { id: 3, name: 'Дима' },
-         { id: 4, name: 'Лагуна' },
-         { id: 5, name: 'Андрей' }
+         { id: 1, name: 'Леша', imgUrl: 'https://pingwin.by/templates/pingwin_tpl/images/logo_web.webp' },
+         { id: 2, name: 'Артем', imgUrl: 'https://pingwin.by/templates/pingwin_tpl/images/logo_web.webp' },
+         { id: 3, name: 'Дима', imgUrl: 'https://pingwin.by/templates/pingwin_tpl/images/logo_web.webp' },
+         { id: 4, name: 'Лагуна', imgUrl: 'https://pingwin.by/templates/pingwin_tpl/images/logo_web.webp' },
+         { id: 5, name: 'Андрей', imgUrl: 'https://pingwin.by/templates/pingwin_tpl/images/logo_web.webp' }
       ]
    }
 }

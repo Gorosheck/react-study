@@ -11,8 +11,8 @@ padding: 20px;
 color: red;
 }
 
-.dialog {
-
+.dialog img {
+ width: 20px;
 }
 
 .messages {
