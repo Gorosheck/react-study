@@ -22,9 +22,9 @@ const Dialogs = (props) => {
             {dialogsElements}
          </div>
          <div className={classes.messages}>
-            {messagesElements}
+            <div>{messagesElements}</div>
             <div>
-               <div><textarea ref={newMessageElement} name="" id="" cols="30" rows="10"></textarea></div>
+               <div><textarea ref={newMessageElement} placeholder='Enter your message' name="" id="" cols="30" rows="10"></textarea></div>
                <div><button onClick={addMessage}>Add message</button></div>
             </div>
          </div>
