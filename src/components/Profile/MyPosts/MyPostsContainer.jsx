@@ -3,7 +3,7 @@ import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../redux/profile-reducer';
 
-const MyPosts = (props) => {
+const MyPostsContainer = (props) => {
 
    let newPostElement = React.createRef();
 
@@ -17,8 +17,6 @@ const MyPosts = (props) => {
    let onPostChange = () => {
       let text = newPostElement.current.value;
       props.updateNewPostText(text);
-      // let action = updateNewPostTextActionCreator(text);
-      // props.dispatch(action);
    }
 
    return (
@@ -34,4 +32,4 @@ const MyPosts = (props) => {
       </div>
    );
 }
-export default MyPosts;
+export default MyPostsContainer;
