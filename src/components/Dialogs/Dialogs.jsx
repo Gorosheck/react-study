@@ -5,14 +5,15 @@ import DialogItem from './DialogItem/DialogItem';
 import { sendMessageCreator, updateNewMessageBodyCreator } from '../../redux/dialogs-reducer';
 
 const Dialogs = (props) => {
+   let state = props.dialogsPage;
 
    let onSendMessageClick = () => {
-      props.dispatch(sendMessageCreator());
+      props.sendMessage();
    }
 
    let onNewMessageChange = (e) => {
       let body = e.target.value;
-      props.dispatch(updateNewMessageBodyCreator(body));
+      props.updateNewMessageBody(body);
    }
 
 
