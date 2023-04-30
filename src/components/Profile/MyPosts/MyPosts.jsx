@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
-import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../redux/profile-reducer';
 
 const MyPosts = (props) => {
 
@@ -9,7 +8,6 @@ const MyPosts = (props) => {
 
    let onAddPost = () => {
       props.addPost();
-
    }
 
    let postsElements = props.postsData.map(post => <Post message={post.message} likesCount={post.likesCount} />);

@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import classes from './Navbar.module.css';
 
-const Navbar = (props) => {
+const Navbar = () => {
 
    return (
       <nav className={classes.nav}>
@@ -22,7 +22,6 @@ const Navbar = (props) => {
             <NavLink to="/settings" className={navData => navData.isActive ? classes.active : classes.item}>Settings</NavLink>
          </div>
       </nav>
-
    );
 }
 export default Navbar;
