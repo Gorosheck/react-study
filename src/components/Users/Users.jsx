@@ -1,9 +1,12 @@
 import React from 'react';
 import styles from './Users.module.css'
+import axios from 'axios';
 
 let Users = (props) => {
-
    if (props.users.length === 0) {
+
+      axios.get("https://social-network.samuraijs.com/api/1.0/users");
+
       props.setUsers([
          { id: 1, photoUrl: 'https://img.freepik.com/premium-vector/cute-little-girl-avatar-round-profile-picture-isolated-on-white-background_176411-3067.jpg', followed: false, fullName: 'Sasha', status: '12', location: { city: 'Minsk', country: 'Belarus' } },
          { id: 2, photoUrl: 'https://img.freepik.com/premium-vector/cute-little-girl-avatar-round-profile-picture-isolated-on-white-background_176411-3067.jpg', followed: true, fullName: 'Andrew', status: '11', location: { city: 'Moscow', country: 'Belarus' } },
