@@ -1,7 +1,11 @@
 import React from 'react';
 import classes from './ProfileInfo.module.css';
+import Preloader from '../../common/Preloader/Preloader';
 
 const ProfileInfo = (props) => {
+   if (!props.profile) {
+      return <Preloader />
+   }
    return (
       <div>
          <div>
@@ -9,7 +13,7 @@ const ProfileInfo = (props) => {
          </div>
 
          <div>
-            <img src='https://motoprokat.by/wp-content/uploads/2018/08/logo_bike.jpg' /> Описание
+            <img src={props.profile.photos.large} /> Описание
          </div>
 
       </div>
