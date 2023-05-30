@@ -13,7 +13,8 @@ const ProfileInfo = (props) => {
          </div>
 
          <div>
-            <img src={props.profile.photos.large} /> Описание
+            <img src={props.profile.photos.large} />
+            Описание
          </div>
 
       </div>
