@@ -3,11 +3,7 @@ import Profile from './Profile';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { setUserProfile } from '../../redux/profile-reducer';
-import {
-   useLocation,
-   useNavigate,
-   useParams,
-} from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 // function withRouter(Component) {
 //    function ComponentWithRouterProp(props) {

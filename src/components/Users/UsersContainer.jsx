@@ -9,8 +9,6 @@ import { userAPI } from '../../api/api';
 class UsersContainer extends React.Component {
    componentDidMount() {
       this.props.toggleIsFetching(true);
-
-
       userAPI.getUsers(this.props.currentPage, this.props.pageSize).then(data => {
          this.props.toggleIsFetching(false);
          this.props.setUsers(data.items);
