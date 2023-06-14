@@ -3,14 +3,13 @@ import Profile from './Profile';
 import { connect } from 'react-redux';
 import { getUserProfile } from '../../redux/profile-reducer';
 import { useParams } from "react-router-dom";
-import { withAuthRedirect } from '../../hoc/withAuthRedirect';
 import { compose } from 'redux';
 
 export function withRouter(Children) {
    return (props) => {
 
       const match = { params: useParams() };
-      return <Children {...props} match={match} />
+      return <Children {...props} match={match} profile={props.profile} />
    }
 }
 
@@ -24,14 +23,13 @@ class ProfileContainer extends React.Component {
       this.props.getUserProfile(userId);
    }
 
-
    render() {
+      debugger;
       return (
          <Profile {...this.props} profile={this.props.profile} />
       );
    }
 }
-
 
 let mapStateToProps = (state) => ({
    profile: state.profilePage.profile
@@ -39,6 +37,5 @@ let mapStateToProps = (state) => ({
 
 export default compose(
    connect(mapStateToProps, { getUserProfile }),
-   withRouter,
-   withAuthRedirect
+   withRouter
 )(ProfileContainer);
