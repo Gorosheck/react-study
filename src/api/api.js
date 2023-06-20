@@ -35,7 +35,7 @@ export const profileAPI = {
       return instance.get(`https://social-network.samuraijs.com/api/1.0/status/` + userId)
    },
    updateStatus(status) {
-      return instance.put(`https://social-network.samuraijs.com/api/1.0/status/`)
+      return instance.put(`https://social-network.samuraijs.com/api/1.0/status/`, { status: status })
    }
 }
 
