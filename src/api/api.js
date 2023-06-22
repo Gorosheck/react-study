@@ -32,10 +32,10 @@ export const profileAPI = {
       return instance.get(`https://social-network.samuraijs.com/api/1.0/profile/` + userId)
    },
    getStatus(userId) {
-      return instance.get(`https://social-network.samuraijs.com/api/1.0/status/` + userId)
+      return instance.get(`https://social-network.samuraijs.com/api/1.0/profile/status/` + userId)
    },
    updateStatus(status) {
-      return instance.put(`https://social-network.samuraijs.com/api/1.0/status/`, { status: status })
+      return instance.put(`https://social-network.samuraijs.com/api/1.0/profile/status/`, { status: status })
    }
 }
 
