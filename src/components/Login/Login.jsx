@@ -19,6 +19,10 @@ const LoginForm = (props) => {
    );
 }
 
+const LoginReduxForm = () => {
+
+}
+
 const Login = (props) => {
    return (
       <div>
