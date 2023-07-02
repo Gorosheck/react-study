@@ -11,13 +11,8 @@ const Dialogs = (props) => {
    let messagesElements = state.messages.map(message => <Message message={message.message} key={message.id} />);
    let newMessageBody = state.newMessageBody;
 
-   let onSendMessageClick = () => {
-      props.sendMessage();
-   }
-
-   let onNewMessageChange = (e) => {
-      let body = e.target.value;
-      props.updateNewMessageBody(body);
+   let addNewMessage = (values) => {
+      props.sendMessage(values.newMessageBody);
    }
 
    return (
@@ -27,19 +22,21 @@ const Dialogs = (props) => {
          </div>
          <div className={classes.messages}>
             <div>{messagesElements}</div>
-            <AddMessageFormRedux />
+            <AddMessageFormRedux onSubmit={addNewMessage} />
          </div>
       </div>
    );
 }
 
 const AddMessageForm = (props) => {
-   <form onSubmit={props.handleSubmit}>
-      <div>
-         <Field component="textarea" name="newMessageBody" placeholder="Enter your message" />
-      </div>
-      <div><button>Add message</button></div>
-   </form>
+   return (
+      <form onSubmit={props.handleSubmit}>
+         <div>
+            <Field component="textarea" name="newMessageBody" placeholder="Enter your message" />
+         </div>
+         <div><button>Add message</button></div>
+      </form>
+   )
 }
 
 const AddMessageFormRedux = reduxForm({ form: "dialogAddMessageForm" })(AddMessageForm)
