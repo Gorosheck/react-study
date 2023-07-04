@@ -2,11 +2,12 @@ import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 import { Field, reduxForm } from 'redux-form';
+import { required } from '../../../utils/validators/validators';
 
 const AddNewPostForm = (props) => {
    return (
       <form onSubmit={props.handleSubmit}>
-         <div><Field name="newPostText" component="textarea" /></div>
+         <div><Field name="newPostText" component="textarea" validate={[required]} /></div>
          <div><button>Add post</button></div>
       </form>
    )
