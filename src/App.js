@@ -7,11 +7,17 @@ import News from './components/News/News';
 import Settings from './components/Settings/Settings';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
-import ProfileContainer from './components/Profile/ProfileContainer';
+import ProfileContainer, { withRouter } from './components/Profile/ProfileContainer';
 import HeaderContainer from './components/Header/HeaderContainer';
 import Login from './components/Login/Login';
+import { connect } from 'react-redux';
+import { getAuthUserData } from './redux/auth-reducer'
+import { compose } from 'redux';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.getAuthUserData();
+  }
   render() {
     return (
       <BrowserRouter>
@@ -36,4 +42,7 @@ class App extends Component {
   }
 }
 
-export default App;
+
+export default compose(
+  withRouter,
+  connect(null, { getAuthUserData }))(App);
