@@ -11,13 +11,12 @@ import ProfileContainer, { withRouter } from './components/Profile/ProfileContai
 import HeaderContainer from './components/Header/HeaderContainer';
 import Login from './components/Login/Login';
 import { connect } from 'react-redux';
-import { getAuthUserData } from './redux/auth-reducer'
 import { compose } from 'redux';
 import { initializeApp } from './redux/app-reducer';
 
 class App extends Component {
   componentDidMount() {
-    this.props.getAuthUserData();
+    this.props.initializeApp();
   }
   render() {
     return (
