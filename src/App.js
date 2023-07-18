@@ -13,12 +13,18 @@ import Login from './components/Login/Login';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { initializeApp } from './redux/app-reducer';
+import Preloader from './components/common/Preloader/Preloader';
 
 class App extends Component {
   componentDidMount() {
     this.props.initializeApp();
   }
   render() {
+
+    if (!this.props.initialized) {
+      return <Preloader />
+    }
+
     return (
       <BrowserRouter>
         <div className='app-wrapper'>
@@ -42,7 +48,10 @@ class App extends Component {
   }
 }
 
+const mapStateToProps = (state) => ({
+  initialized: state.app.initialized
+});
 
 export default compose(
   withRouter,
-  connect(null, (initializeApp)))(App);
+  connect(mapStateToProps, (initializeApp)))(App);
