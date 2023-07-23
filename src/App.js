@@ -20,11 +20,9 @@ class App extends Component {
     this.props.initializeApp();
   }
   render() {
-
     if (!this.props.initialized) {
       return <Preloader />
     }
-
     return (
       <BrowserRouter>
         <div className='app-wrapper'>
