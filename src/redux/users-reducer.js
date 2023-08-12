@@ -17,7 +17,6 @@ let initialState = {
    followingInProgress: []
 }
 
-
 const usersReducer = (state = initialState, action) => {
 
    switch (action.type) {
@@ -31,7 +30,6 @@ const usersReducer = (state = initialState, action) => {
                return u;
             })
          }
-
       case UNFOLLOW:
          return {
             ...state,
@@ -42,15 +40,12 @@ const usersReducer = (state = initialState, action) => {
                return u;
             })
          }
-
       case SET_USERS: {
          return { ...state, users: action.users }
       }
-
       case SET_CURRENT_PAGE: {
          return { ...state, currentPage: action.currentPage }
       }
-
       case SET_TOTAL_USERS_COUNT: {
          return { ...state, totalUsersCount: action.count }
       }
@@ -65,7 +60,6 @@ const usersReducer = (state = initialState, action) => {
                : state.followingInProgress.filter(id => id !== action.userId)
          }
       }
-
       default:
          return state;
    }
