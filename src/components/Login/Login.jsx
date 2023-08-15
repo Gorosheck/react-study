@@ -7,7 +7,6 @@ import { login } from '../../redux/auth-reducer';
 import { Navigate } from 'react-router-dom';
 import style from '../common/FormsControls/FormsControls.module.css'
 
-
 const LoginForm = (handleSubmit, error) => {
    return (
       <form onSubmit={handleSubmit}>
@@ -36,11 +35,9 @@ const Login = (props) => {
    const onSubmit = (formData) => {
       props.login(formData.email, formData.password, formData.rememberMe)
    }
-
    if (props.isAuth) {
       <Navigate to="/profile" />
    }
-
    return (
       <div>
          <h1>LOGIN</h1>
