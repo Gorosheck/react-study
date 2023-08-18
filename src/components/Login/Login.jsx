@@ -7,6 +7,7 @@ import { login } from '../../redux/auth-reducer';
 import { Navigate } from 'react-router-dom';
 import style from '../common/FormsControls/FormsControls.module.css'
 
+
 const LoginForm = (handleSubmit, error) => {
    return (
       <form onSubmit={handleSubmit}>
@@ -27,6 +28,7 @@ const LoginForm = (handleSubmit, error) => {
    );
 }
 
+
 const LoginReduxForm = reduxForm({
    form: 'login'
 })(LoginForm)
@@ -46,8 +48,10 @@ const Login = (props) => {
    );
 }
 
+
 const mapStateToProps = (state) => ({
    isAuth: state.auth.isAuth
 })
+
 
 export default connect(mapStateToProps, { login })(Login);
